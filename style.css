@@ -1,3 +1,4 @@
+/*
 .line{
 width: 50%;
 height: 50px;
@@ -6,7 +7,7 @@ position: absolute;
 bottom:95px;
 left: 0px;
 }
-
+*/
 body {
 	font-family: "Montserrat", sans-serif;
 
@@ -19,6 +20,7 @@ body {
 	flex-direction: column;
 }
 
+/* Main Map Data */
 
 #overlay {
 	display: flex;
@@ -29,6 +31,9 @@ body {
 	bottom: 40px;
 }
 
+#coverart {
+	display: flex;
+}
 
 #cover {
 	overflow: hidden;
@@ -41,6 +46,58 @@ body {
 	height: 200px;
 	background: url(BS_Logo.jpg) no-repeat;
 }
+
+#metadata {
+	display: flex;
+	flex-direction: column;
+
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+#bsrnum {
+	display: block;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#mappername, #difficulty, #dash {
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#artist {
+	display: block;
+	font-size: 24px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#titles {
+	display: flex;
+	align-items: flex-end;
+}
+
+#title {
+	font-size: 48px;
+	font-weight: 700;
+	margin: 2px 0 0 0;
+}
+
+#subtitles {
+	display: flex;
+	align-items: flex-end;
+}
+
+#subtitle {
+	font-size: 32px;
+	font-weight: 600;
+	margin: 2px 0 0 0;
+}
+
 
 #cover svg {
 	transform: rotate(-90deg);
@@ -57,9 +114,12 @@ body {
 
 #cover svg, #cover div {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 }
+
+
+
 
 
 
@@ -82,21 +142,21 @@ body {
 	position: absolute;
 	bottom: 5px;		
 	left: 50%;
-	margin-left: -90px;
+	margin-left: -135px;
 }
 
 #healthbar svg, #healthbar div {
 	position: absolute;
 	bottom: 5px;	
 	left: 50%;
-	margin-left: 0px;
+	margin-left: -45px;
 }
 
 #accuracybar svg, #accuracybar div {
 	position: absolute;
 	bottom: 5px;		
 	left: 50%;
-	margin-left: 90px;
+	margin-left: 45px;
 }
 
 #darken {

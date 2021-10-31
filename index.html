@@ -10,32 +10,37 @@
 <div class="line"></div>
 
 <div id="overlay" class="hidden">
-	<div id="cover">
-		<img id="image">				
-		<svg width="200" height="200">
-			<rect width="200" height="200" id="darken"></rect>
-		</svg>
-	</div>
-	<div id="metadata">
-		<div id="bsr">
-			<span id="bsrnum">BSR: 12345</span>
+	<div id="coverart">
+		<div id="cover">
+			<img id="image">				
+			<svg width="200" height="200">
+				<rect width="200" height="200" id="darken"></rect>
+			</svg>
 		</div>
-		<div id="mapper">
-			<span id="mappername">Mapper</span>
-			<span> - </span>
-			<span id="difficulty">Easy</span>
-		</div>
-		<div id="text">
-			<span id="artist">Artist</span>
-			<div id="titles">
-				<span id="title">Title</span>
+		<div id="metadata">
+			<div id="bsr">
+				<span id="bsrnum">BSR: 12345</span>
 			</div>
-			<div id="subtitles">
-				<span id="subtitle">Subtitle</span>
-			</div>			
-		</div>
-	</div>
+			<div id="mapper">
+				<span id="mappername">Mapper</span>
+				<span id="dash"> - </span>
+				<span id="difficulty">Easy</span>
+			</div>
+			<div id="text">
+				<span id="artist">Artist</span>
+				<div id="titles">
+					<span id="title">Title</span>
+				</div>
+				<div id="subtitles">
+					<span id="subtitle">Subtitle</span>
+				</div>			
+			</div>
+		</div>		
+	</div>	
+</div>
+
 	
+<div id="bars" class="hidden">
 	<div id="performance">		
 		<div class="performance-group">
 			<div>		
@@ -78,7 +83,7 @@
 					<circle cx="45" cy="45" r="30" id="progress"></circle>
 				</svg>
 				<div>
-					<span id="health-text">2:00</span>
+					<span id="health-text">100%</span>
 				</div>
 			</div>
 			
@@ -89,7 +94,7 @@
 					<circle cx="45" cy="45" r="30" id="progress"></circle>
 				</svg>
 				<div>
-					<span id="accuracy-text">3:00</span>
+					<span id="accuracy-text">80%</span>
 				</div>
 			</div>
 		</div>
