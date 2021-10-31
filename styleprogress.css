@@ -1,0 +1,86 @@
+/*
+.line{
+width: 50%;
+height: 50px;
+border-bottom: 10px solid black;
+position: absolute;
+bottom:95px;
+left: 0px;
+}
+*/
+body {
+	font-family: "Montserrat", sans-serif;
+
+	color: red;
+	/* background: black; */
+
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+
+/* Main Map Data */
+
+#bars {
+	display: flex;
+	flex-direction: row;
+	
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+}
+
+#performance {
+	display: flex;
+}
+
+.scores {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+#combos, #misses {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#beatmap {
+	display: flex;
+	flex-direction: row;
+
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+
+#progressbar svg, #healthbar svg, #accuracybar svg {
+	transform: rotate(-90deg);
+}
+
+#darken {
+	fill: black;
+	opacity: 0.25;
+}
+
+#remaining, #progress {
+	fill: transparent;
+	stroke: blue;
+	stroke-width: 4px;
+	
+}
+
+#remaining {
+	opacity: 0.25;
+}
+
+#progress {
+	stroke-dasharray: 377;
+	stroke-dashoffset: 370;
+}
+

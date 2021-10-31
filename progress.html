@@ -3,61 +3,28 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Overlay</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="styleprogress.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet"> 
 	</head>
 	
 <div class="line"></div>
 
-<div id="overlay" class="hidden">
-	<div id="coverart">
-		<div id="cover">
-			<img id="image">
-			<svg width="200" height="200">
-				<rect width="200" height="200" id="darken"></rect>
-			</svg>
-		</div>
-		<div id="metadata">
-			<div id="bsr">
-				<span id="bsrnum">BSR: 12345</span>
-			</div>
-			<div id="mapper">
-				<span id="mappername">Mapperaaaaaaaaaa</span>
-				<span id="dash"> - </span>
-				<span id="difficulty">Easy</span>
-			</div>
-			<div id="text">
-				<span id="artist">Artistaaaaaaaaaaaaaaaaaaaaaaa</span>
-				<div id="titles">
-					<span id="title">Titleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
-				</div>
-				<div id="subtitles">
-					<span id="subtitle">Subtitleaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
-				</div>
-				<div id="meta">
-				<div>
-					<span id="bpm">0 BPM</span>
-					<span id="njs">0 NJS</span>
-				</div>
-			</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
 <div id="bars" class="hidden">
 	<div id="performance">
-		<div class="performance-group">
-			<div>
+		<div class="scores">
+			<div id="combos">
 				<span class="text">Combo</span>
-				<span class="text" id="combo">0</span>
+				<span class="text" id="combo">00000</span>
 			</div>
-			<div>
+			<div id="misses">
 				<span class="text">Miss</span>
-				<span class="text" id="miss">0</span>
+				<span class="text" id="miss">00000</span>
 			</div>
-				<span id="score">0</span>
+			<span id="score">000000000</span>
+			<div id="heartrate">
+				<span class="text">HRM</span>
+				<span class="text" id="hrm">000</span>
+			</div>
 		</div>
 		
 		<div id="beatmap">
@@ -67,19 +34,13 @@
 					<circle cx="75" cy="75" r="60" id="remaining"></circle>
 					<circle cx="75" cy="75" r="60" id="progress"></circle>
 				</svg>
-<!--				<div id="progress-text">-->
 					<div id="progresstime">
 						
 							<span id="progress-current">1:00</span>
 						
 						
-							<span id="progress-total">4:00</span>
-						
+							<span id="progress-total">4:00</span>				
 					</div>
-<!--					<div>
-						<span id="progress-total">4:00</span>
-					</div>
-<!--				</div>-->
 			</div>
 
 			<div id="healthbar">

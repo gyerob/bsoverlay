@@ -1,4 +1,4 @@
-/*
+
 .line{
 width: 50%;
 height: 50px;
@@ -7,7 +7,7 @@ position: absolute;
 bottom:95px;
 left: 0px;
 }
-*/
+
 body {
 	font-family: "Montserrat", sans-serif;
 
@@ -27,8 +27,8 @@ body {
 	flex-direction: column;
 	
 	position: absolute;
-	left: 40px;
-	bottom: 40px;
+	left: 20px;
+	bottom: 20px;
 }
 
 #coverart {
@@ -57,39 +57,42 @@ body {
 
 #bsrnum {
 	display: block;
-	font-size: 24px;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 4px 0 0 0;
+}
+
+#mappername, #difficulty, #dash, #bpm, #njs {
+	display: inline-block;
+	font-size: 20px;
 	font-weight: 400;
 	margin: 2px 0 0 0;
 }
 
-#mappername, #difficulty, #dash {
+#bpm, #njs {
 	display: inline-block;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: 400;
 	margin: 2px 0 0 0;
 }
 
 #artist {
 	display: block;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 400;
 	margin: 2px 0 0 0;
 }
 
-#titles {
-	display: flex;
-	align-items: flex-end;
+#text {
+	width: 500px;
+	overflow: hidden;
 }
 
 #title {
 	font-size: 48px;
 	font-weight: 700;
+	width: 400px;
 	margin: 2px 0 0 0;
-}
-
-#subtitles {
-	display: flex;
-	align-items: flex-end;
 }
 
 #subtitle {
@@ -97,7 +100,6 @@ body {
 	font-weight: 600;
 	margin: 2px 0 0 0;
 }
-
 
 #cover svg {
 	transform: rotate(-90deg);
@@ -134,29 +136,29 @@ body {
 	align-items: center;
 	justify-content: center;
 
-	width: 90px;
-	height: 90px;
+	width: 150px;
+	height: 150px;
 }
 
 #progressbar svg, #progressbar div {
 	position: absolute;
 	bottom: 5px;		
 	left: 50%;
-	margin-left: -135px;
+	margin-left: -225px;
 }
 
 #healthbar svg, #healthbar div {
 	position: absolute;
 	bottom: 5px;	
 	left: 50%;
-	margin-left: -45px;
+	margin-left: -75px;
 }
 
 #accuracybar svg, #accuracybar div {
 	position: absolute;
 	bottom: 5px;		
 	left: 50%;
-	margin-left: 45px;
+	margin-left: 75px;
 }
 
 #darken {
@@ -175,11 +177,48 @@ body {
 }
 
 #progress {
-	stroke-dasharray: 188.495px, 188.495px;
-	stroke-dashoffset: 188.495px;
+	stroke-dasharray: 377;
+	stroke-dashoffset: 377;
 }
 
-#progress-text {
+#progresstime div {
+	display: flex;
+	flex-direction: column;
+	
+	flex-grow: 1;
+	align-items: center;
+	justify-content: center;
+	
+	position: absolute;
+	padding: 0 16px;
+
+	width: 120px;
+	height: 120px;
+}
+/*
+#overlay {
+	display: flex;
+	
+	position: absolute;
+	left: 40px;
+	bottom: 40px;
+}
+
+#artist {
+	display: block;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+*/
+#progress-current {
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+}
+#progress-total {
+	display: block;
 	font-size: 16px;
 	font-weight: 600;
 }
