@@ -1,0 +1,261 @@
+
+.line{
+width: 50%;
+height: 50px;
+border-bottom: 10px solid black;
+position: absolute;
+bottom:95px;
+left: 0px;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+
+	color: red;
+	/* background: black; */
+
+	margin: 0;
+/*
+	display: flex;
+	flex-direction: column;*/
+}
+
+/* Main Map Data */
+
+#overlay {
+	display: flex;
+	flex-direction: column;
+	
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}
+
+#coverart {
+	display: flex;
+}
+
+#cover {
+	overflow: hidden;
+	border-radius: 6px;
+	position: relative;
+}
+
+#image {
+	width: 200px;
+	height: 200px;
+	background: url(BS_Logo.jpg) no-repeat;
+}
+
+#metadata {
+	display: flex;
+	flex-direction: column;
+
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+#bsrnum {
+	display: block;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 4px 0 0 0;
+}
+
+#mappername, #difficulty, #dash, #bpm, #njs {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#bpm, #njs {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#artist {
+	display: block;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#text {
+	width: 500px;
+	overflow: hidden;
+}
+
+#title {
+	font-size: 48px;
+	font-weight: 700;
+	width: 400px;
+	margin: 2px 0 0 0;
+}
+
+#subtitle {
+	font-size: 32px;
+	font-weight: 600;
+	margin: 2px 0 0 0;
+}
+
+#cover svg {
+	transform: rotate(-90deg);
+}
+
+#cover div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 200px;
+	height: 200px;
+}
+
+#cover svg, #cover div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+
+/* Progress */
+
+#bars {
+	display: flex;
+	flex-direction: row;
+	
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+}
+
+#performance {
+	display: flex;
+}
+
+#datas {
+	display: flex;
+	flex-direction: column;
+
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+#beatmap {
+	display: flex;
+	flex-direction: row;
+
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+#combos, #misses, #scores, #heartrate {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#darken, #darken1, #darken2, #darken3 {
+	fill: black;
+	opacity: 0.25;
+}
+
+#remaining1, #remaining2, #remaining3, #progress1, #progress2, #progress3 {
+	fill: transparent;
+	stroke: blue;
+	stroke-width: 4px;	
+}
+
+#remaining1,#remaining2, #remaining3 {
+	opacity: 0.25;
+}
+
+#progress1, #progress2, #progress3 {
+	stroke-dasharray: 377;
+	stroke-dashoffset: 370;
+}
+/*
+#datas div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
+}
+
+#datas svg, #datas div {
+	position: absolute;
+	bottom: 20px;
+	left: -300px;
+}
+*/
+
+
+#progressbar svg {
+	transform: rotate(-90deg);
+}
+
+#progressbar div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
+}
+
+#progressbar svg, #progressbar div {
+	position: absolute;
+	bottom: 20px;
+	left: -150px;
+}
+
+#healthbar svg {
+	transform: rotate(-90deg);
+}
+
+#healthbar div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
+}
+
+#healthbar svg, #healthbar div {
+	position: absolute;
+	bottom: 20px;
+	left: 0px;
+}
+
+#accuracybar svg {
+	transform: rotate(-90deg);
+}
+
+#accuracybar div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
+}
+
+#accuracybar svg, #accuracybar div {
+	position: absolute;
+	bottom: 20px;
+	left: 150px;
+}
+
+#datas div, #datas svg {
+	position: relative;
+	bottom: 20px;
+	left: -300px;
+}
