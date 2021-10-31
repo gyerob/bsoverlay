@@ -1,4 +1,4 @@
-
+/*
 .line{
 width: 50%;
 height: 50px;
@@ -7,7 +7,7 @@ position: absolute;
 bottom:95px;
 left: 0px;
 }
-
+*/
 body {
 	font-family: "Montserrat", sans-serif;
 
@@ -15,6 +15,9 @@ body {
 	/* background: black; */
 
 	margin: 0;
+	
+	max-width: 1920px;
+	
 /*
 	display: flex;
 	flex-direction: column;*/
@@ -142,7 +145,13 @@ body {
 	flex-direction: column;
 
 	flex-grow: 1;
-	padding: 0 16px;
+	padding: 8px 16px;
+	
+}
+
+#progresstime {
+	display: flex;	
+	flex-direction: column;
 }
 
 #beatmap {
@@ -157,7 +166,7 @@ body {
 	display: block;
 	font-size: 16px;
 	font-weight: 400;
-	margin: 2px 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 #darken, #darken1, #darken2, #darken3 {
