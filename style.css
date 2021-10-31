@@ -1,13 +1,31 @@
-/*
+
 .line{
 width: 50%;
 height: 50px;
 border-bottom: 10px solid black;
 position: absolute;
-bottom:95px;
+bottom:85px;
 left: 0px;
 }
-*/
+
+.line2{
+width: 1920px;
+height: 50px;
+border-bottom: 10px solid black;
+position: absolute;
+bottom:110px;
+left: 0px;
+}
+
+.line3{
+width: 960px;
+height: 50px;
+border-bottom: 10px solid black;
+position: absolute;
+bottom:130px;
+left: 0px;
+}
+
 body {
 	font-family: "Montserrat", sans-serif;
 
@@ -16,7 +34,7 @@ body {
 
 	margin: 0;
 	
-	max-width: 1920px;
+	width: 1920px;
 	
 /*
 	display: flex;
@@ -45,8 +63,8 @@ body {
 }
 
 #image {
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	background: url(BS_Logo.jpg) no-repeat;
 }
 
@@ -60,14 +78,14 @@ body {
 
 #bsrnum {
 	display: block;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 400;
 	margin: 4px 0 0 0;
 }
 
 #mappername, #difficulty, #dash, #bpm, #njs {
 	display: inline-block;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 400;
 	margin: 2px 0 0 0;
 }
@@ -81,7 +99,7 @@ body {
 
 #artist {
 	display: block;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 400;
 	margin: 2px 0 0 0;
 }
@@ -92,14 +110,14 @@ body {
 }
 
 #title {
-	font-size: 48px;
+	font-size: 32px;
 	font-weight: 700;
 	width: 400px;
 	margin: 2px 0 0 0;
 }
 
 #subtitle {
-	font-size: 32px;
+	font-size: 20px;
 	font-weight: 600;
 	margin: 2px 0 0 0;
 }
@@ -113,8 +131,8 @@ body {
 	align-items: center;
 	justify-content: center;
 
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 }
 
 #cover svg, #cover div {
@@ -159,14 +177,14 @@ body {
 	flex-direction: row;
 
 	flex-grow: 1;
-	padding: 0 16px;
+	padding: 0 0px;
 }
 
 #combos, #misses, #scores, #heartrate {
 	display: block;
 	font-size: 16px;
 	font-weight: 400;
-	margin: 20px 0 0 0;
+	margin: 0 0 0 0;
 }
 
 #darken, #darken1, #darken2, #darken3 {
@@ -215,14 +233,14 @@ body {
 	align-items: center;
 	justify-content: center;
 
-	width: 150px;
-	height: 150px;
+	width: 110px;
+	height: 110px;
 }
 
 #progressbar svg, #progressbar div {
 	position: absolute;
-	bottom: 20px;
-	left: -150px;
+	bottom: 130px;
+	left: -55px;
 }
 
 #healthbar svg {
@@ -234,8 +252,8 @@ body {
 	align-items: center;
 	justify-content: center;
 
-	width: 150px;
-	height: 150px;
+	width: 110px;
+	height: 110px;
 }
 
 #healthbar svg, #healthbar div {
@@ -253,18 +271,20 @@ body {
 	align-items: center;
 	justify-content: center;
 
-	width: 150px;
-	height: 150px;
+	width: 110px;
+	height: 110px;
 }
 
 #accuracybar svg, #accuracybar div {
 	position: absolute;
 	bottom: 20px;
-	left: 150px;
+	left: 110px;
 }
+
+
 
 #datas div, #datas svg {
 	position: relative;
 	bottom: 20px;
-	left: -300px;
+	left: -221px;
 }
