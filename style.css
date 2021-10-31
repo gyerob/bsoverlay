@@ -15,9 +15,9 @@ body {
 	/* background: black; */
 
 	margin: 0;
-
+/*
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;*/
 }
 
 /* Main Map Data */
@@ -122,16 +122,86 @@ body {
 
 
 
-
-
-
 /* Progress */
 
-#progressbar svg, #healthbar svg, #accuracybar svg {
+#bars {
+	display: flex;
+	flex-direction: row;
+	
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+}
+
+#performance {
+	display: flex;
+}
+
+#datas {
+	display: flex;
+	flex-direction: column;
+
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+#beatmap {
+	display: flex;
+	flex-direction: row;
+
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+#combos, #misses, #scores, #heartrate {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#darken, #darken1, #darken2, #darken3 {
+	fill: black;
+	opacity: 0.25;
+}
+
+#remaining1, #remaining2, #remaining3, #progress1, #progress2, #progress3 {
+	fill: transparent;
+	stroke: blue;
+	stroke-width: 4px;	
+}
+
+#remaining1,#remaining2, #remaining3 {
+	opacity: 0.25;
+}
+
+#progress1, #progress2, #progress3 {
+	stroke-dasharray: 377;
+	stroke-dashoffset: 370;
+}
+/*
+#datas div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
+}
+
+#datas svg, #datas div {
+	position: absolute;
+	bottom: 20px;
+	left: -300px;
+}
+*/
+
+
+#progressbar svg {
 	transform: rotate(-90deg);
 }
 
-#progressbar div, #healthbar div, #accuracybar div {
+#progressbar div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -142,93 +212,50 @@ body {
 
 #progressbar svg, #progressbar div {
 	position: absolute;
-	bottom: 5px;		
-	left: 50%;
-	margin-left: -225px;
+	bottom: 20px;
+	left: -150px;
+}
+
+#healthbar svg {
+	transform: rotate(-90deg);
+}
+
+#healthbar div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
 }
 
 #healthbar svg, #healthbar div {
 	position: absolute;
-	bottom: 5px;	
-	left: 50%;
-	margin-left: -75px;
+	bottom: 20px;
+	left: 0px;
+}
+
+#accuracybar svg {
+	transform: rotate(-90deg);
+}
+
+#accuracybar div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
 }
 
 #accuracybar svg, #accuracybar div {
 	position: absolute;
-	bottom: 5px;		
-	left: 50%;
-	margin-left: 75px;
+	bottom: 20px;
+	left: 150px;
 }
 
-#darken {
-	fill: black;
-	opacity: 0.25;
-}
-
-#remaining, #progress {
-	fill: transparent;
-	stroke: blue;
-	stroke-width: 4px;
-}
-
-#remaining {
-	opacity: 0.25;
-}
-
-#progress {
-	stroke-dasharray: 377;
-	stroke-dashoffset: 377;
-}
-
-#progresstime div {
-	display: flex;
-	flex-direction: column;
-	
-	flex-grow: 1;
-	align-items: center;
-	justify-content: center;
-	
-	position: absolute;
-	padding: 0 16px;
-
-	width: 120px;
-	height: 120px;
-}
-/*
-#overlay {
-	display: flex;
-	
-	position: absolute;
-	left: 40px;
-	bottom: 40px;
-}
-
-#artist {
-	display: block;
-	font-size: 20px;
-	font-weight: 400;
-	margin: 2px 0 0 0;
-}
-
-*/
-#progress-current {
-	display: block;
-	font-size: 16px;
-	font-weight: 600;
-}
-#progress-total {
-	display: block;
-	font-size: 16px;
-	font-weight: 600;
-}
-
-#health-text {
-	font-size: 16px;
-	font-weight: 600;
-}
-
-#accuracy-text {
-	font-size: 16px;
-	font-weight: 600;
+#datas div, #datas svg {
+	position: relative;
+	bottom: 20px;
+	left: -300px;
 }

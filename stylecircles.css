@@ -20,36 +20,27 @@ body {
 
 /* Main Map Data */
 
-
-
 #bars {
 	display: flex;
-	flex-direction: row;
 	
-	position: absolute;
-	left: 200px;
-	bottom: 200px;
 }
 
 #performance {
 	display: flex;
+	flex-direction: row;
 }
 
-#datas {
+.beatmaps {
 	display: flex;
 	flex-direction: column;
-
+	justify-content: space-between;
 	flex-grow: 1;
 	padding: 0 16px;
-}
-
-#beatmap {
 	display: flex;
-	flex-direction: row;
-
-	flex-grow: 1;
-	padding: 0 16px;
+	align-items: center;
+	justify-content: center;
 }
+
 
 #combos, #misses, #scores, #heartrate {
 	display: block;
@@ -58,18 +49,13 @@ body {
 	margin: 2px 0 0 0;
 }
 
-#darken1, #darken2, #darken3 {
-	fill: black;
-	opacity: 0.25;
-}
-
 #remaining1, #remaining2, #remaining3, #progress1, #progress2, #progress3 {
 	fill: transparent;
 	stroke: blue;
 	stroke-width: 4px;	
 }
 
-#remaining1,#remaining2, #remaining3 {
+#remaining1, #remaining2, #remaining3 {
 	opacity: 0.25;
 }
 
@@ -79,11 +65,13 @@ body {
 }
 
 
-#progressbar svg {
+
+
+#progressbar svg, #healthbar svg, #accuracybar svg {
 	transform: rotate(-90deg);
 }
 
-#progressbar div {
+#progressbar div, #healthbar div, #accuracybar div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -92,46 +80,64 @@ body {
 	height: 150px;
 }
 
+#progressbar svg, #healthbar svg, #accuracybar svg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
+}
+/*
 #progressbar svg, #progressbar div {
 	position: absolute;
-	top: 0;
-	left: 150px;
-}
-
-#healthbar svg {
-	transform: rotate(-90deg);
-}
-
-#healthbar div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	width: 150px;
-	height: 150px;
+	bottom: 5px;		
+	left: 50%;
+	margin-left: -225px;
 }
 
 #healthbar svg, #healthbar div {
 	position: absolute;
-	top: 0;
-	left: 300px;
-}
-
-#accuracybar svg {
-	transform: rotate(-90deg);
-}
-
-#accuracybar div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	width: 150px;
-	height: 150px;
+	bottom: 5px;	
+	left: 50%;
+	margin-left: -75px;
 }
 
 #accuracybar svg, #accuracybar div {
 	position: absolute;
-	top: 0;
-	left: 450px;
+	bottom: 5px;		
+	left: 50%;
+	margin-left: 75px;
+}
+
+#progresstime div {
+	position: absolute;
+	bottom: 5px;		
+	left: 50%;
+	margin-left: -225px;
+}
+*/
+
+
+
+
+#progress-current {
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+}
+#progress-total {
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+#health-text {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+#accuracy-text {
+	font-size: 16px;
+	font-weight: 600;
 }

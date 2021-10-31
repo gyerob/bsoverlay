@@ -48,45 +48,45 @@
 
 <div id="bars" class="hidden">
 	<div id="performance">
-		<div class="performance-group">
-			<div>
+		<div id="datas" class="data">
+			<!--<svg width="150" height="150">
+				<rect width="150" height="150" id="darken"></rect>
+			</svg>-->
+			<div id="combos">
 				<span class="text">Combo</span>
-				<span class="text" id="combo">0</span>
+				<span class="text" id="combo">00000</span>
 			</div>
-			<div>
+			<div id="misses">
 				<span class="text">Miss</span>
-				<span class="text" id="miss">0</span>
+				<span class="text" id="miss">00000</span>
 			</div>
-				<span id="score">0</span>
+			<div id="scores">
+				<span id="score" class="text">000000000</span>
+			</div>
+			<div id="heartrate">
+				<span class="text">HRM</span>
+				<span class="text" id="hrm">000</span>
+			</div>
 		</div>
 		
-		<div id="beatmap">
+		<div class="beatmaps" id="beatmap">
 			<div id="progressbar">
 				<svg width="150" height="150">
-					<rect width="150" height="150" id="darken"></rect>
-					<circle cx="75" cy="75" r="60" id="remaining"></circle>
-					<circle cx="75" cy="75" r="60" id="progress"></circle>
+					<rect width="150" height="150" id="darken1"></rect>
+					<circle cx="75" cy="75" r="60" id="remaining1"></circle>
+					<circle cx="75" cy="75" r="60" id="progress1"></circle>
 				</svg>
-<!--				<div id="progress-text">-->
 					<div id="progresstime">
-						
-							<span id="progress-current">1:00</span>
-						
-						
-							<span id="progress-total">4:00</span>
-						
-					</div>
-<!--					<div>
+						<span id="progress-current">1:00</span>
 						<span id="progress-total">4:00</span>
 					</div>
-<!--				</div>-->
 			</div>
 
 			<div id="healthbar">
 				<svg width="150" height="150">
-					<rect width="150" height="150" id="darken"></rect>
-					<circle cx="75" cy="75" r="60" id="remaining"></circle>
-					<circle cx="75" cy="75" r="60" id="progress"></circle>
+					<rect width="150" height="150" id="darken2"></rect>
+					<circle cx="75" cy="75" r="60" id="remaining2"></circle>
+					<circle cx="75" cy="75" r="60" id="progress2"></circle>
 				</svg>
 				<div>
 					<span id="health-text">100%</span>
@@ -95,9 +95,9 @@
 
 			<div id="accuracybar">
 				<svg width="150" height="150">
-					<rect width="150" height="150" id="darken"></rect>
-					<circle cx="75" cy="75" r="60" id="remaining"></circle>
-					<circle cx="75" cy="75" r="60" id="progress"></circle>
+					<rect width="150" height="150" id="darken3"></rect>
+					<circle cx="75" cy="75" r="60" id="remaining3"></circle>
+					<circle cx="75" cy="75" r="60" id="progress3"></circle>
 				</svg>
 				<div>
 					<span id="accuracy-text">80%</span>
