@@ -1,0 +1,210 @@
+
+body {
+	font-family: "Montserrat", sans-serif;
+
+	color: red;
+
+	margin: 0;
+	
+	/*
+	background-image: url('stream screen.jpg');
+	background-repeat: no-repeat;
+	*/
+}
+
+/* Main Map Data */
+
+#overlay {
+	display: flex;
+	flex-direction: column;
+	
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	max-height: 1080px;
+}
+
+#coverart {
+	display: flex;
+}
+
+#cover {
+	overflow: hidden;
+	border-radius: 6px;
+	position: relative;
+}
+
+#image {
+	width: 150px;
+	height: 150px;
+	background: url(BS_Logo.jpg) no-repeat;
+}
+
+#metadata {
+	display: flex;
+	flex-direction: column;
+
+	flex-grow: 1;
+	padding: 0 16px;
+}
+
+#bsrnum {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 4px 0 0 0;
+}
+
+#mappername, #difficulty, #dash, #bpm, #njs {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#artist {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 2px 0 0 0;
+}
+
+#text {
+	width: 500px;
+	overflow: hidden;
+}
+
+#title {
+	font-size: 32px;
+	font-weight: 700;
+	width: 400px;
+	margin: 2px 0 0 0;
+}
+
+#subtitle {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 2px 0 0 0;
+}
+
+#cover svg {
+	transform: rotate(-90deg);
+}
+
+#cover div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 150px;
+	height: 150px;
+}
+
+#cover svg, #cover div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+
+
+/* Progress */
+
+
+
+#datas {
+	display: flex;
+	flex-direction: column;
+
+	flex-grow: 1;
+	padding: 0 0px;
+}
+
+#combos, #misses, #heartrate, #scores {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 3px 0 4px 0;
+}
+
+#adatok {
+	display: flex;
+	flex-direction: row;
+	
+	position: absolute;
+	/*left: 810px;*/
+	bottom: 20px;
+	
+	left: 50%;
+	transform: translate3d(-100%, 0, 0);
+}
+
+#hpbar {
+  /*margin: 50px auto;*/
+  
+	position: absolute;
+	left: 50%;
+	bottom: 0px;
+	transform: translate3d(-50%, 0, 0);
+
+	padding: 0px;
+	width: 100%;
+	max-width: 500px;
+	background: yellow;
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 10px;
+	overflow: hidden;
+}
+
+#hpbar .hpprogress_bar {
+	height: 100%;
+	width: 50%;
+	border-radius: 4px;
+	background: green;
+	transition: 0.3s;
+}
+/*
+#ellapsedtime {
+	display: flex;
+	flex-direction: row;
+	
+	padding: 0px;
+	width: 100%;
+	max-width: 350px;
+	background: yellow;
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 10px;
+	overflow: hidden;
+}
+
+#ellapsedtime .timeprogress_bar {
+	height: 100%;
+	width: 50%;
+	border-radius: 4px;
+	background: green;
+	transition: 0.3s;
+}*/
+
+
+#timeprogressbar {display: flex;
+	flex-direction: row;
+	padding: 0px;
+	width: 100%;
+	max-width: 350px;
+	background: yellow;
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 10px;
+	overflow: hidden;
+}
+
+#ellapsedtime .timeprogress_bar {
+	height: 50%;
+	width: 50%;
+	border-radius: 4px;
+	background: green;
+	transition: 0.3s;
+}
