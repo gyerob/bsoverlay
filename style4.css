@@ -1,0 +1,239 @@
+
+body {
+	font-family: "Montserrat", sans-serif;
+
+	color: white;
+
+	margin: 0;	
+	
+	background-image: url('stream screen.jpg');
+	background-repeat: no-repeat;
+	/*font-family: NeonTubes2;*/
+}
+
+@font-face{
+    font-family: NeonTubes2;
+    src:url("NeonTubes2.otf") format("opentype");
+}
+
+/* Main Map Data */
+
+#image {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	width: 150px;
+	height: 150px;
+	background: url(BS_Logo.jpg) no-repeat;
+}
+
+#bsr {
+	position: absolute;
+	left: 20px;
+	bottom: 170px;
+	width:150px;
+	text-align: center;
+}
+
+#mapperdiv {
+	position: absolute;
+	left: 180px;
+	bottom: 45px;
+}
+
+#titlediv {
+	position: absolute;
+	left: 180px;
+	bottom: 130px;
+	
+	font-size: 36px;
+	font-weight: 700;
+	width: 415px;
+	
+	overflow: hidden;
+}
+
+#subtitlediv {
+	position: absolute;
+	left: 180px;
+	bottom: 100px;
+	
+	font-size: 24px;
+	font-weight: 600;
+	width: 415px;
+	
+	overflow: hidden;
+}
+
+#artistdiv {
+	position: absolute;
+	left: 180px;
+	bottom: 70px;
+	
+	font-size: 20px;
+	font-weight: 300;
+	width: 415px;
+	
+	overflow: hidden;
+}
+
+/* Time progresses... */
+
+#currenttime {
+	position: absolute;
+	left: 180px;
+	bottom: 20px;
+}
+
+#ellapsedtime {
+	position: absolute;
+	left: 230px;
+	bottom: 25px;
+}
+
+#totaltime {
+	position: absolute;
+	left: 550px;
+	bottom: 20px;
+}
+
+#ellapsedtime {
+	padding: 0px;
+	width: 100%;
+	max-width: 315px;
+	background: grey;
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 10px;
+	overflow: hidden;
+}
+
+#ellapsedtime .timeprogress_bar {
+	height: 100%;
+	width: 30%;
+	border-radius: 4px;
+	background: white;
+	transition: 0.3s;
+}
+
+/* HP */
+
+#hpbar {
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	transform: translate3d(-50%, 0, 0);
+
+	padding: 0px;
+	width: 100%;
+	max-width: 500px;
+	background: grey;
+	/*background: rgba(255,255,0,0.5);*/
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 10px;
+	overflow: hidden;
+}
+
+#hpbar .hpprogress_bar {
+	height: 100%;
+	width: 65%;
+	border-radius: 4px;
+	background: white;
+	transition: 0.3s;
+}
+
+/* Metrics */
+
+#combos {
+	position: absolute;
+	left: 50%;
+	bottom: 45px;
+	transform: translate3d(-50%, 0, 0);
+	
+	font-size: 36px;
+	font-weight: 700;
+	
+	font-family: NeonTubes2;
+	
+	text-shadow: 0 0 10px #fff, -2px -2px 4px #0f0, 2px 2px 4px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 20px #fff, 0 0 10px #fff
+}
+
+#hits {
+	position: absolute;
+	width: 100px;
+	left: 50%;
+	bottom: 25px;
+	transform: translate3d(-105px, 0, 0);
+	text-align: right;
+	
+	font-family: NeonTubes2;
+	
+	text-shadow: 0 0 10px #fff, -2px -2px 4px #0f0, 2px 2px 4px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 20px #fff, 0 0 10px #fff
+}
+
+#separator {
+	position: absolute;
+	left: 50%;
+	bottom: 25px;
+	transform: translate3d(-50%, 0, 0);
+	
+	font-family: NeonTubes2;
+	
+	text-shadow: 0 0 10px #fff, -2px -2px 4px #0f0, 2px 2px 4px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 20px #fff, 0 0 10px #fff
+}
+
+#misses {
+	position: absolute;
+	width: 100px;
+	left: 50%;
+	bottom: 25px;
+	transform: translate3d(5px, 0, 0);
+	text-align: left;
+	
+	font-family: NeonTubes2;
+	
+	text-shadow: 0 0 10px #fff, -2px -2px 4px #0f0, 2px 2px 4px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 20px #fff, 0 0 10px #fff
+}
+
+#percentages {
+	position: absolute;
+	left: 50%;
+	bottom: 45px;
+	
+	font-size: 36px;
+	font-weight: 700;
+	transform: translate3d(-250px, 0, 0);
+	
+	font-family: NeonTubes2;
+	
+	text-shadow: 0 0 10px #fff, -2px -2px 4px #0f0, 2px 2px 4px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 20px #fff, 0 0 10px #fff
+}
+
+#scores {
+	position: absolute;
+	left: 50%;
+	bottom: 25px;
+	
+	transform: translate3d(-250px, 0, 0);
+	
+	font-family: NeonTubes2;
+	
+	text-shadow: 0 0 10px #fff, -2px -2px 4px #0f0, 2px 2px 4px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 20px #fff, 0 0 10px #fff
+}
+
+#heartrate {
+	position: absolute;
+	width: 100px;
+	left: 50%;
+	bottom: 45px;
+	transform: translate3d(150px, 0, 0);
+	text-align: right;
+	
+	font-size: 36px;
+	font-weight: 700;
+	
+	font-family: NeonTubes2;
+	
+	text-shadow: 0 0 10px #fff, -2px -2px 4px #0f0, 2px 2px 4px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 20px #fff, 0 0 10px #fff
+}
