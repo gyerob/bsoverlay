@@ -31,6 +31,6 @@ const events = {
 
 	menu() {
 		ui.timer.stop();
-		//ui.hide();
+		ui.hide();
 	}
 }
