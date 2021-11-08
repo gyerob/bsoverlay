@@ -2,11 +2,18 @@ const query = new URLSearchParams(location.search);
 
 function connect() {
 	var ip = query.get("ip") || "localhost";
-	var port = query.get("port") || 6557;
+	var port = query.get("port") || 6557;	
+	var port2 = query.get("port") || 2946;
+	
 
 	var socket = new WebSocket(`ws://${ip}:${port}/socket`);
+	var dpsocket = new WebSocket(`ws://${ip}:${port2}/BSDataPuller/LiveData`);
 
 	socket.addEventListener("open", () => {
+		console.log("WebSocket opened");
+	});
+	
+	dpsocket.addEventListener("open", () => {
 		console.log("WebSocket opened");
 	});
 
@@ -18,10 +25,20 @@ function connect() {
 			event(data.status, data.time);
 		}
 	});
+	
+	dpsocket.addEventListener("message", (message) => {
+		var dpdata = JSON.parse(message.data);
+		ui.hpbar(dpdata);
+	});
 
 	ui.show();
 
 	socket.addEventListener("close", () => {
+		console.log("Failed to connect, retrying");
+		setTimeout(connect, 3000);
+	});
+	
+	dpsocket.addEventListener("close", () => {
 		console.log("Failed to connect, retrying");
 		setTimeout(connect, 3000);
 	});
@@ -108,6 +125,14 @@ const ui = (() => {
 			hit.innerText = data.hitNotes;			
 			energy.style.width = data.batteryEnergy + "%";
 			console.log(data.batteryEnergy);
+		}
+	})();
+	
+	const hpbar = (() => {
+		var energy = document.getElementById("hpprogressbar");
+
+		return (data) => {
+			energy.style.width = data.PlayerHealth + "%";
 		}
 	})();
 
@@ -222,7 +247,8 @@ const ui = (() => {
 
 		performance,
 		timer,
-		beatmap
+		beatmap,
+		hpbar
 	}
 })();
 

@@ -13,10 +13,7 @@ function connect() {
 
 	socketmap.addEventListener("message", (message) => {
 		var mapdata = JSON.parse(message.data);
-		
-		ui.beatmap(data.beatmap, time);
-		ui.performance(data.performance);
-		ui.show();
+		ui.beatmap(mapdata);
 	});
 
 	socketmap.addEventListener("close", () => {
@@ -30,8 +27,7 @@ function connect() {
 
 	socketlive.addEventListener("message", (message) => {
 		var livedata = JSON.parse(message.data);
-		
-		ui.performance(data.performance);
+		ui.performance(livedata);
 	});
 
 	socketlive.addEventListener("close", () => {
@@ -40,25 +36,6 @@ function connect() {
 	});
 }
 
-
-
-
-const events = {
-	
-
-	pause(data, time) {
-		ui.timer.pause(data.beatmap.paused + (Date.now() - time));
-	},
-
-	resume(data, time) {
-		ui.timer.start(data.beatmap.start + (Date.now() - time), data.beatmap.length);
-	},
-
-	menu() {
-		ui.timer.stop();
-		ui.hide();
-	}
-}
 
 
 const ui = (() => {
@@ -71,19 +48,20 @@ const ui = (() => {
 		var hit = document.getElementById("hit");
 		var miss = document.getElementById("miss");
 		var energy = document.getElementById("hpprogressbar");
-
+		/*var number = "";
+		
 		function format(number) {
 			return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		}
-
+*/
 		return (data) => {
-			score.innerText = format(data.score);
-			combo.innerText = data.combo;
-			percentage.innerText = (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%";
-			miss.innerText = data.missedNotes;
+			score.innerText = data.Score;
+			combo.innerText = data.Combo;
+			percentage.innerText = data.Accuracy + "%";
+			miss.innerText = data.Misses;
 			hit.innerText = data.hitNotes;			
-			energy.style.width = data.batteryEnergy + "%";
-			console.log(data.batteryEnergy);
+			energy.style.width = data.PlayerHealth + "%";
+			console.log(data);
 		}
 	})();
 
@@ -176,13 +154,14 @@ const ui = (() => {
 			return `${minutes}:${seconds}`;
 		}
 
-		return (data, time) => {
-			cover.setAttribute("src", `data:image/png;base64,${data.coverImage}`);
+		return (data) => {
+			cover.style.background = "url(" + data.coverImage + ")";
 			title.innerText = data.SongName;					
 			artist.innerText = data.SongAuthor;
 			mapper.innerText = data.Mapper;
 			duration.innerText = format(data.Length);
 			timer.start(Date.now()/1000, data.Length);
+			console.log(data);
 		}
 	})();
 
@@ -195,9 +174,8 @@ const ui = (() => {
 			main.classList.remove("hidden");
 		},
 
-		performance,
-		timer,
-		beatmap
+		beatmap,
+		performance
 	}
 })();
 
