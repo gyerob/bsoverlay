@@ -7,7 +7,7 @@ body {
 	margin: 0;	
 	
 	/*background-image: url('stream screen.jpg');
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 	/*font-family: NeonTubes2;*/
 }
 
@@ -228,4 +228,26 @@ body {
 	font-family: NeonTubes2;
 	
 	text-shadow: 0 0 10px #fff, -2px -2px 4px #0f0, 2px 2px 4px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0, 0 0 20px #fff, 0 0 10px #fff
+}
+
+
+
+
+#overlay {
+	--show: cubic-bezier(0.19, 1, 0.22, 1) 500ms;
+	--hide: cubic-bezier(0.55, 0.085, 0.68, 0.53) 200ms;
+}
+
+#overlay #songdata, #overlay #metrics, #overlay #hpbar > * {
+	transition:
+		opacity var(--show),
+		transform var(--show);
+}
+
+#overlay.hidden #songdata, #overlay.hidden #metrics, #overlay.hidden #hpbar > * {
+	opacity: 0;
+	transform: translate(0, 15px);
+	transition:
+		opacity var(--hide),
+		transform var(--hide);
 }

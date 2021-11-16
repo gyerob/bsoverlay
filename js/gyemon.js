@@ -9,6 +9,8 @@ function connect() {
 	var socket = new WebSocket(`ws://${ip}:${port}/socket`);
 	var dpsocket = new WebSocket(`ws://${ip}:${port2}/BSDataPuller/LiveData`);
 
+	console.log("start logging in");
+
 	socket.addEventListener("open", () => {
 		console.log("WebSocket opened");
 	});
