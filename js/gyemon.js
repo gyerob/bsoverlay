@@ -124,9 +124,7 @@ const ui = (() => {
 			combo.innerText = data.combo;
 			percentage.innerText = (data.currentMaxScore > 0 ? (Math.floor((data.score / data.currentMaxScore) * 1000) / 10) : 0) + "%";
 			miss.innerText = data.missedNotes;
-			hit.innerText = data.hitNotes;			
-			energy.style.width = data.batteryEnergy + "%";
-			console.log(data.batteryEnergy);
+			hit.innerText = data.hitNotes;
 		}
 	})();
 	

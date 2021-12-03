@@ -14,7 +14,7 @@ req.onreadystatechange = function () {
 		valasz = JSON.parse(req.responseText);
 		for (const key in valasz){
 			if(valasz.hasOwnProperty(key)){
-				console.log(`${key} : ${valasz[key]}`)
+				//console.log(`${key} : ${valasz[key]}`)
 				hrm.innerText = valasz["bpm"];
 			}
 		}
@@ -22,7 +22,7 @@ req.onreadystatechange = function () {
 }
 
 function startpulse(){
-	timer = setInterval(getpulsoid,500);
+	timer = setInterval(getpulsoid,1000);
 	console.log("start timer");
 }
 
